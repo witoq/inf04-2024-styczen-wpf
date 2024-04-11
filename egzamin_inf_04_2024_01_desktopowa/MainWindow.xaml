@@ -1,0 +1,56 @@
+﻿<Window x:Class="egzamin_inf_04_2024_01_desktopowa.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:egzamin_inf_04_2024_01_desktopowa"
+        mc:Ignorable="d"
+        Title="Wprowadzenie danych do paszportu. Wykonał: 00000000000" Height="300" Width="700">
+    <Grid Background="#5f9EA0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Grid.Column="0" Margin="20px">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center">Numer</TextBlock>
+            <TextBox Background="#F0ffff" Grid.Row="0" Grid.Column="1" x:Name="numer_text_box" Height="20px" LostFocus="zmiana_zdj"></TextBox>
+            <TextBlock Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center">Imię</TextBlock>
+            <TextBox Background="#F0ffff" Grid.Row="1" Grid.Column="1" x:Name="imie_text_box" Height="20px"></TextBox>
+            <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center">Nazwisko</TextBlock>
+            <TextBox Background="#F0ffff" Grid.Row="2" Grid.Column="1" x:Name="nazwisko_text_box" Height="20px"></TextBox>
+        </Grid>
+        <GroupBox Grid.Row="1" Margin="20px" Header="Kolor oczu" BorderBrush="White">
+            <StackPanel>
+                <RadioButton  GroupName="kolor_group_name" IsChecked="true" x:Name="niebieskie">niebieskie</RadioButton>
+                <RadioButton  GroupName="kolor_group_name" IsChecked="false" x:Name="zielone">zielone</RadioButton>
+                <RadioButton  GroupName="kolor_group_name" IsChecked="false" x:Name="piwne">piwne</RadioButton>
+            </StackPanel>
+        </GroupBox>
+        <Grid Grid.Column="1" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="7*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Image x:Name="zdj" Source="Images/000-zdjecie.jpg" Height="200"></Image>
+            <Image x:Name="odcisk_zdj" Source="Images/000-odcisk.jpg" Grid.Column="1" Height="200"></Image>
+            <Button  Background="#F0ffff" Grid.Row="1" Grid.ColumnSpan="2" Width="200" Height="50" Click="wyswietl_komunikat" >OK</Button>
+        </Grid>
+    </Grid>
+</Window>

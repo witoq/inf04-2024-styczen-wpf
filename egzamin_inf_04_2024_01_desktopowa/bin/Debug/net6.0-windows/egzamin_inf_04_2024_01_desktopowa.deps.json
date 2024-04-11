@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "egzamin_inf_04_2024_01_desktopowa/1.0.0": {
+        "runtime": {
+          "egzamin_inf_04_2024_01_desktopowa.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "egzamin_inf_04_2024_01_desktopowa/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
